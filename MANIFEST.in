@@ -1,0 +1,17 @@
+include LICENSE
+include UI-Flip-glass/LICENSE
+include README.md
+include NOTICE.md
+recursive-include UI-Flip-glass *.json *.md *.js *.ts *.css *.html
+prune UI-Flip-glass/node_modules
+recursive-include assets/icons *.ico *.png *.svg
+include src/funasr/__init__.py
+recursive-include assets/lexicons *.json
+recursive-include docs *.md
+recursive-include packaging *.py
+recursive-include requirements *.txt
+recursive-include scripts *.py *.ps1
+recursive-include tests *.py
+recursive-include src/voice_input/web_dist *.html *.css *.js *.json
+recursive-include webui *.html *.js *.css *.json
+prune webui/node_modules

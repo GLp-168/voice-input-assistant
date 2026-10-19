@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Web runtime
+webui/node_modules/
+webui/.vite/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local runtime artifacts
+logs/
+recordings/
+tmp/
+*.wav
+*.mp3
+*.flac
+
+# Download cache; keep curated bundled runtime files under vendor/whispercpp.
+vendor/
+node_modules/
+build-logs/
+.verification/
+.env
+.env.*
+!.env.example
+*.log
+*.db
+*.sqlite*
+*.pem
+*.key
+*.p12
+*.pfx
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+*.exe
+*.dll
+*.zip
+*.7z
+*.tar.gz
+*.m4a
+*.ogg
+*.mp4
+*.webm

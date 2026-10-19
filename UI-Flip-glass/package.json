@@ -1,0 +1,48 @@
+{
+  "name": "ui-flip-glass",
+  "version": "0.2.0",
+  "description": "Voice Input Assistant glass adapter with a pinned GPL-3.0 Mineradio displacement map.",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "style": "src/style.css",
+  "sideEffects": [
+    "**/*.css",
+    "src/auto.js"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./auto": {
+      "types": "./src/index.d.ts",
+      "import": "./src/auto.js"
+    },
+    "./style.css": "./src/style.css",
+    "./styles": "./src/style.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "demo",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "UPSTREAM-NOTICE.md"
+  ],
+  "keywords": [
+    "web-components",
+    "glassmorphism",
+    "ui",
+    "music-player",
+    "electron",
+    "mineradio"
+  ],
+  "scripts": {
+    "check": "node --check src/index.js && node --check src/auto.js",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "license": "GPL-3.0-only"
+}

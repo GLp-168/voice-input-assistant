@@ -1,0 +1,623 @@
+[
+  {
+    "source": "会义",
+    "target": "会议",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "会义纪要",
+    "target": "会议纪要",
+    "rule_type": "replace",
+    "weight": 120,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "会议纪腰",
+    "target": "会议纪要",
+    "rule_type": "replace",
+    "weight": 120,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "议提",
+    "target": "议题",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "议成",
+    "target": "议程",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "主持仁",
+    "target": "主持人",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "参会人元",
+    "target": "参会人员",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "代办事项",
+    "target": "待办事项",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "责任部们",
+    "target": "责任部门",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "完成实限",
+    "target": "完成时限",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "里程杯",
+    "target": "里程碑",
+    "rule_type": "replace",
+    "weight": 70,
+    "metadata": {
+      "domain": "project-management"
+    }
+  },
+  {
+    "source": "验手",
+    "target": "验收",
+    "rule_type": "replace",
+    "weight": 70,
+    "metadata": {
+      "domain": "project-management"
+    }
+  },
+  {
+    "source": "复盘会义",
+    "target": "复盘会议",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "project-management"
+    }
+  },
+  {
+    "source": "周抱",
+    "target": "周报",
+    "rule_type": "replace",
+    "weight": 70,
+    "metadata": {
+      "domain": "office-document"
+    }
+  },
+  {
+    "source": "月抱",
+    "target": "月报",
+    "rule_type": "replace",
+    "weight": 70,
+    "metadata": {
+      "domain": "office-document"
+    }
+  },
+  {
+    "source": "会议纪要",
+    "target": "会议纪要",
+    "aliases": [
+      "会义纪要",
+      "会议纪腰",
+      "会议记要",
+      "会议纪药"
+    ],
+    "rule_type": "hotword",
+    "weight": 130,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "参会人员",
+    "target": "参会人员",
+    "aliases": [
+      "参会人元",
+      "参会成员",
+      "参会人员名单"
+    ],
+    "rule_type": "hotword",
+    "weight": 120,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "议题",
+    "target": "议题",
+    "aliases": [
+      "议提",
+      "会议议题",
+      "本次议题"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "议程",
+    "target": "议程",
+    "aliases": [
+      "议成",
+      "会议议程",
+      "议程安排"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "待办事项",
+    "target": "待办事项",
+    "aliases": [
+      "代办事项",
+      "待办事相",
+      "待办项目"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "责任部门",
+    "target": "责任部门",
+    "aliases": [
+      "责任部们",
+      "责任单位",
+      "负责部门"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "完成时限",
+    "target": "完成时限",
+    "aliases": [
+      "完成实限",
+      "完成期限",
+      "完成时间限制"
+    ],
+    "rule_type": "hotword",
+    "weight": 100,
+    "metadata": {
+      "domain": "office-meeting"
+    }
+  },
+  {
+    "source": "里程碑",
+    "target": "里程碑",
+    "aliases": [
+      "里程杯",
+      "里程碑节点",
+      "里程碑计划"
+    ],
+    "rule_type": "hotword",
+    "weight": 100,
+    "metadata": {
+      "domain": "project-management"
+    }
+  },
+  {
+    "source": "复盘会议",
+    "target": "复盘会议",
+    "aliases": [
+      "复盘会义",
+      "复盘会",
+      "复盘总结会"
+    ],
+    "rule_type": "hotword",
+    "weight": 100,
+    "metadata": {
+      "domain": "project-management"
+    }
+  },
+  {
+    "source": "周报",
+    "target": "周报",
+    "aliases": [
+      "周抱",
+      "周报告",
+      "周报表"
+    ],
+    "rule_type": "hotword",
+    "weight": 90,
+    "metadata": {
+      "domain": "office-document"
+    }
+  },
+  {
+    "source": "月报",
+    "target": "月报",
+    "aliases": [
+      "月抱",
+      "月报告",
+      "月度报告"
+    ],
+    "rule_type": "hotword",
+    "weight": 90,
+    "metadata": {
+      "domain": "office-document"
+    }
+  },
+  {
+    "source": "专题会议",
+    "target": "专题会议",
+    "rule_type": "hotword",
+    "aliases": [
+      "专题会",
+      "专提会议",
+      "专题研究会"
+    ],
+    "weight": 120,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "常务会议",
+    "target": "常务会议",
+    "rule_type": "hotword",
+    "aliases": [
+      "常务会",
+      "常委会议",
+      "常务议"
+    ],
+    "weight": 120,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "党组会议",
+    "target": "党组会议",
+    "rule_type": "hotword",
+    "aliases": [
+      "党组会",
+      "党组织会议",
+      "党组议"
+    ],
+    "weight": 120,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "局务会",
+    "target": "局务会",
+    "rule_type": "hotword",
+    "aliases": [
+      "局务会议",
+      "局物会",
+      "局务办公会"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "办公会",
+    "target": "办公会",
+    "rule_type": "hotword",
+    "aliases": [
+      "办公会议",
+      "办工会",
+      "行政办公会"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "联席会议",
+    "target": "联席会议",
+    "rule_type": "hotword",
+    "aliases": [
+      "联席会",
+      "联系会议",
+      "联合席会议"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "调度会",
+    "target": "调度会",
+    "rule_type": "hotword",
+    "aliases": [
+      "调度会议",
+      "调渡会",
+      "工作调度会"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "推进会",
+    "target": "推进会",
+    "rule_type": "hotword",
+    "aliases": [
+      "推进会议",
+      "推近会"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "项目推进会",
+    "target": "项目推进会",
+    "rule_type": "hotword",
+    "aliases": [],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "meeting-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "督办事项",
+    "target": "督办事项",
+    "rule_type": "hotword",
+    "aliases": [
+      "督办事项目",
+      "督办项目",
+      "督办任务"
+    ],
+    "weight": 120,
+    "domain": "office-meeting",
+    "category": "supervision",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "责任清单",
+    "target": "责任清单",
+    "rule_type": "hotword",
+    "aliases": [
+      "责任清淡",
+      "职责清单",
+      "责任事项清单"
+    ],
+    "weight": 120,
+    "domain": "office-meeting",
+    "category": "task-management",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "任务清单",
+    "target": "任务清单",
+    "rule_type": "hotword",
+    "aliases": [
+      "任务清淡",
+      "工作任务清单",
+      "任务台账"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "task-management",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "问题清单",
+    "target": "问题清单",
+    "rule_type": "hotword",
+    "aliases": [
+      "问题清淡",
+      "问题台账",
+      "问题整改清单"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "task-management",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "整改台账",
+    "target": "整改台账",
+    "rule_type": "hotword",
+    "aliases": [
+      "整改台帐",
+      "整改抬账",
+      "整改账台"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "rectification",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "销号管理",
+    "target": "销号管理",
+    "rule_type": "hotword",
+    "aliases": [
+      "消号管理",
+      "销号闭环",
+      "销号办理"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "rectification",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "闭环管理",
+    "target": "闭环管理",
+    "rule_type": "hotword",
+    "aliases": [
+      "闭环办理",
+      "闭环管里",
+      "形成闭环"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "rectification",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "牵头单位",
+    "target": "牵头单位",
+    "rule_type": "hotword",
+    "aliases": [
+      "牵头部门",
+      "牵头单为",
+      "牵头处室"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "responsibility",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "配合单位",
+    "target": "配合单位",
+    "rule_type": "hotword",
+    "aliases": [
+      "配合部门",
+      "配合单为",
+      "协办单位"
+    ],
+    "weight": 110,
+    "domain": "office-meeting",
+    "category": "responsibility",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "议定事项",
+    "target": "议定事项",
+    "rule_type": "hotword",
+    "aliases": [
+      "议定事向",
+      "会议议定事项",
+      "议定任务"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "minutes",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "会议精神",
+    "target": "会议精神",
+    "rule_type": "hotword",
+    "aliases": [
+      "会议精 神",
+      "会议要求",
+      "会议部署精神"
+    ],
+    "weight": 110,
+    "domain": "office-meeting",
+    "category": "minutes",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "工作专班",
+    "target": "工作专班",
+    "rule_type": "hotword",
+    "aliases": [
+      "工作专版",
+      "专班推进",
+      "成立专班"
+    ],
+    "weight": 115,
+    "domain": "office-meeting",
+    "category": "task-force",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  }
+]

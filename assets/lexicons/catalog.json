@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "lexicons": [
+    {
+      "id": "government_digital",
+      "title": "政务/数字政府",
+      "description": "政务服务、数字政府、营商环境等常用表达纠错。",
+      "filename": "government_digital.json",
+      "default_enabled": true,
+      "min_tier": "basic",
+      "tags": ["government", "digital-government"]
+    },
+    {
+      "id": "official_document",
+      "title": "公文规范",
+      "description": "公文要素、文种、格式术语等常见误识别修正。",
+      "filename": "official_document.json",
+      "default_enabled": true,
+      "min_tier": "basic",
+      "tags": ["official-document", "government"]
+    },
+    {
+      "id": "office_meeting",
+      "title": "办公会议",
+      "description": "会议纪要、议题议程、项目协作等办公场景词汇。",
+      "filename": "office_meeting.json",
+      "default_enabled": true,
+      "min_tier": "basic",
+      "tags": ["office-meeting", "project-management"]
+    },
+    {
+      "id": "finance_budget",
+      "title": "财税/预算",
+      "description": "专项债、预算、税务、采购、国库支付等财政场景词汇。",
+      "filename": "finance_budget.json",
+      "default_enabled": true,
+      "min_tier": "basic",
+      "tags": ["finance", "budget", "tax"]
+    },
+    {
+      "id": "project_engineering",
+      "title": "工程/招投标",
+      "description": "招投标、工程量清单、施工、验收、结算等项目工程词汇。",
+      "filename": "project_engineering.json",
+      "default_enabled": true,
+      "min_tier": "basic",
+      "tags": ["engineering", "project", "bidding"]
+    }
+  ]
+}

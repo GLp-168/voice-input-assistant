@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>Voice Input Glass Demo</title>
+<link rel="stylesheet" href="../src/style.css">
+<body class="fg-shell"><button id="notice" type="button">显示提示</button>
+<section data-fg-glass style="width:320px;height:100px;border-radius:24px">GPL-3.0 玻璃表面演示</section>
+<script type="module">import { enhanceGlass, showToast } from '../src/index.js'; enhanceGlass(); document.querySelector('#notice').onclick=()=>showToast('组件正常');</script></body></html>

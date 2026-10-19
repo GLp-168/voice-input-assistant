@@ -1,0 +1,600 @@
+[
+  {
+    "source": "公纹",
+    "target": "公文",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "official-document",
+      "source_reference": "党政机关公文处理工作条例"
+    }
+  },
+  {
+    "source": "发文自号",
+    "target": "发文字号",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "发文字好",
+    "target": "发文字号",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "签法人",
+    "target": "签发人",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "主送机官",
+    "target": "主送机关",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "抄送机官",
+    "target": "抄送机关",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "成文日其",
+    "target": "成文日期",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "附件说名",
+    "target": "附件说明",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "版纪",
+    "target": "版记",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "请视",
+    "target": "请示",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "批付",
+    "target": "批复",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "纪腰",
+    "target": "纪要",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "仿送",
+    "target": "仿宋",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "official-document-format",
+      "source_reference": "GB/T 9704-2012"
+    }
+  },
+  {
+    "source": "黑提",
+    "target": "黑体",
+    "rule_type": "replace",
+    "weight": 70,
+    "metadata": {
+      "domain": "official-document-format"
+    }
+  },
+  {
+    "source": "楷提",
+    "target": "楷体",
+    "rule_type": "replace",
+    "weight": 70,
+    "metadata": {
+      "domain": "official-document-format"
+    }
+  },
+  {
+    "source": "发文字号",
+    "target": "发文字号",
+    "aliases": [
+      "发文自号",
+      "发文字好",
+      "发文子号",
+      "发文字表"
+    ],
+    "rule_type": "hotword",
+    "weight": 130,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "主送机关",
+    "target": "主送机关",
+    "aliases": [
+      "主送机官",
+      "主送机构",
+      "主送机关单位"
+    ],
+    "rule_type": "hotword",
+    "weight": 120,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "抄送机关",
+    "target": "抄送机关",
+    "aliases": [
+      "抄送机官",
+      "抄送机构",
+      "抄送机关单位"
+    ],
+    "rule_type": "hotword",
+    "weight": 120,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "签发人",
+    "target": "签发人",
+    "aliases": [
+      "签法人",
+      "签发仁",
+      "签发人员"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "成文日期",
+    "target": "成文日期",
+    "aliases": [
+      "成文日其",
+      "成文日记",
+      "成文日期期"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "附件说明",
+    "target": "附件说明",
+    "aliases": [
+      "附件说名",
+      "附件申明",
+      "附件声明"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "请示",
+    "target": "请示",
+    "aliases": [
+      "请视",
+      "请事",
+      "请示报告"
+    ],
+    "rule_type": "hotword",
+    "weight": 100,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "批复",
+    "target": "批复",
+    "aliases": [
+      "批付",
+      "批覆",
+      "批复意见"
+    ],
+    "rule_type": "hotword",
+    "weight": 100,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "仿宋",
+    "target": "仿宋",
+    "aliases": [
+      "仿送",
+      "仿宋体",
+      "仿宋字体"
+    ],
+    "rule_type": "hotword",
+    "weight": 100,
+    "metadata": {
+      "domain": "official-document-format"
+    }
+  },
+  {
+    "source": "版记",
+    "target": "版记",
+    "aliases": [
+      "版纪",
+      "板记",
+      "版记部分"
+    ],
+    "rule_type": "hotword",
+    "weight": 90,
+    "metadata": {
+      "domain": "official-document"
+    }
+  },
+  {
+    "source": "党政机关公文处理工作条例",
+    "target": "党政机关公文处理工作条例",
+    "rule_type": "hotword",
+    "aliases": [
+      "党政机关公文条例",
+      "公文处理工作条例",
+      "党政机关公文处理条例"
+    ],
+    "weight": 130,
+    "domain": "official-document",
+    "category": "regulation",
+    "usage": "asr-hotword",
+    "confidence": 0.95,
+    "examples": []
+  },
+  {
+    "source": "联合发文",
+    "target": "联合发文",
+    "rule_type": "hotword",
+    "aliases": [
+      "联合行文",
+      "联合发纹",
+      "联合印发"
+    ],
+    "weight": 115,
+    "domain": "official-document",
+    "category": "issuing",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "行文关系",
+    "target": "行文关系",
+    "rule_type": "hotword",
+    "aliases": [
+      "行文关西",
+      "行文规则",
+      "行文方式"
+    ],
+    "weight": 115,
+    "domain": "official-document",
+    "category": "writing-rule",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "上行文",
+    "target": "上行文",
+    "rule_type": "hotword",
+    "aliases": [
+      "上行文件",
+      "上行纹",
+      "上报文"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "writing-direction",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "下行文",
+    "target": "下行文",
+    "rule_type": "hotword",
+    "aliases": [
+      "下行文件",
+      "下行纹",
+      "下发文"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "writing-direction",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "平行文",
+    "target": "平行文",
+    "rule_type": "hotword",
+    "aliases": [
+      "平行文件",
+      "平行纹",
+      "同级行文"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "writing-direction",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "公开属性",
+    "target": "公开属性",
+    "rule_type": "hotword",
+    "aliases": [
+      "公开属信",
+      "公开属性栏",
+      "政府信息公开属性"
+    ],
+    "weight": 115,
+    "domain": "official-document",
+    "category": "disclosure",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "主动公开",
+    "target": "主动公开",
+    "rule_type": "hotword",
+    "aliases": [
+      "主动公开",
+      "主动公示",
+      "主动公开属性"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "disclosure",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "依申请公开",
+    "target": "依申请公开",
+    "rule_type": "hotword",
+    "aliases": [
+      "依申请公开",
+      "依申请公开属性",
+      "依申请公开办理"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "disclosure",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "不予公开",
+    "target": "不予公开",
+    "rule_type": "hotword",
+    "aliases": [
+      "不于公开",
+      "不宜公开",
+      "不予公开"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "disclosure",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "拟稿人",
+    "target": "拟稿人",
+    "rule_type": "hotword",
+    "aliases": [
+      "拟稿员",
+      "起草人",
+      "拟搞人"
+    ],
+    "weight": 105,
+    "domain": "official-document",
+    "category": "drafting",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "核稿人",
+    "target": "核稿人",
+    "rule_type": "hotword",
+    "aliases": [
+      "核稿员",
+      "核搞人",
+      "审核人"
+    ],
+    "weight": 105,
+    "domain": "official-document",
+    "category": "drafting",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "签批",
+    "target": "签批",
+    "rule_type": "hotword",
+    "aliases": [
+      "签披",
+      "签批意见",
+      "领导签批"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "approval",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "套红",
+    "target": "套红",
+    "rule_type": "hotword",
+    "aliases": [
+      "套红文件",
+      "套弘",
+      "红头文件"
+    ],
+    "weight": 105,
+    "domain": "official-document",
+    "category": "format",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "归档",
+    "target": "归档",
+    "rule_type": "hotword",
+    "aliases": [
+      "规档",
+      "文件归档",
+      "档案归档"
+    ],
+    "weight": 105,
+    "domain": "official-document",
+    "category": "archive",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "密级",
+    "target": "密级",
+    "rule_type": "hotword",
+    "aliases": [
+      "秘级",
+      "秘密等级",
+      "保密级别"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "security",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "紧急程度",
+    "target": "紧急程度",
+    "rule_type": "hotword",
+    "aliases": [
+      "紧急成度",
+      "特急件",
+      "加急件"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "urgency",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "附注",
+    "target": "附注",
+    "rule_type": "hotword",
+    "aliases": [
+      "付注",
+      "附注说明",
+      "备注附注"
+    ],
+    "weight": 105,
+    "domain": "official-document",
+    "category": "format",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "印发机关",
+    "target": "印发机关",
+    "rule_type": "hotword",
+    "aliases": [
+      "印发机官",
+      "印发单位",
+      "印发机关名称"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "format",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "议案",
+    "target": "议案",
+    "rule_type": "hotword",
+    "aliases": [
+      "提案议案",
+      "议安",
+      "议案办理"
+    ],
+    "weight": 110,
+    "domain": "official-document",
+    "category": "document-type",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  }
+]

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' file: qrc: data:; script-src 'self' file: qrc:; style-src 'self' 'unsafe-inline' file:; img-src 'self' file: data:; font-src 'self' file: data:; connect-src 'none'; object-src 'none'; base-uri 'none'; frame-src 'none'">
+  <title>Voice Input Assistant · 语音输入助手</title>
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+</head>
+<body class="fg-shell fg-theme">
+  <div class="fg-stage app-stage" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-a"></div>
+    <div class="ambient-orb ambient-orb-b"></div>
+    <div class="voice-wave" id="voiceWave">
+      <span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span>
+      <span style="--i:5"></span><span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span>
+      <span style="--i:9"></span><span style="--i:10"></span><span style="--i:11"></span><span style="--i:12"></span>
+      <span style="--i:13"></span><span style="--i:14"></span><span style="--i:15"></span><span style="--i:16"></span>
+      <span style="--i:17"></span><span style="--i:18"></span><span style="--i:19"></span><span style="--i:20"></span>
+      <span style="--i:21"></span><span style="--i:22"></span><span style="--i:23"></span><span style="--i:24"></span>
+    </div>
+  </div>
+
+  <header class="app-titlebar" id="titlebar">
+    <div class="app-brand">
+      <span class="fg-brand-mark"></span>
+      <span class="app-brand-name">VOICE INPUT</span>
+      <span class="app-brand-separator"></span>
+      <span class="app-brand-context" id="brandContext">本地语音工作台</span>
+    </div>
+    <div class="titlebar-center">
+      <span class="connection-dot" id="connectionDot"></span>
+      <span id="connectionText">正在连接运行时</span>
+    </div>
+    <div class="fg-window-actions app-window-actions">
+      <button class="fg-icon-button compact-panel-button" id="compactPanelButton" type="button" aria-label="打开会话面板" aria-expanded="false" title="会话面板"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+      <button class="fg-icon-button" id="helpButton" type="button" aria-label="使用帮助" title="使用帮助"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.8 9a2.4 2.4 0 1 1 3.2 2.3c-.7.3-1 .8-1 1.7M12 17h.01"></path></svg></button>
+      <button class="fg-icon-button" id="minimizeButton" type="button" aria-label="最小化" title="最小化"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"></path></svg></button>
+      <button class="fg-icon-button" id="maximizeButton" type="button" aria-label="最大化" title="最大化"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1"></rect></svg></button>
+      <button class="fg-icon-button close-button" id="closeButton" type="button" aria-label="关闭" title="关闭"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 10M17 7 7 17"></path></svg></button>
+    </div>
+  </header>
+
+  <main class="runtime-shell">
+    <section class="fg-card-panel transcript-panel" aria-labelledby="transcriptTitle">
+      <header class="transcript-header">
+        <div>
+          <div class="section-kicker">LIVE TRANSCRIPT</div>
+          <div class="transcript-title-row">
+            <h1 id="transcriptTitle">转写稿</h1>
+          </div>
+          <p id="transcriptMeta">0 字 · 本地处理</p>
+        </div>
+        <div class="document-actions" aria-label="转写工具">
+          <button class="fg-glass-button action-button" id="copyButton" type="button" title="复制全文" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+            <span>复制</span>
+          </button>
+          <button class="fg-glass-button action-button" id="findButton" type="button" title="查找替换" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <span>查找</span>
+          </button>
+          <button class="fg-glass-button action-button" id="clearButton" type="button" title="清空文本" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13"></path></svg>
+            <span>清空</span>
+          </button>
+          <div class="menu-wrap">
+            <button class="fg-glass-button action-button" id="exportButton" type="button" title="导出" aria-haspopup="menu" aria-expanded="false" aria-controls="exportMenu" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4"></path><path d="M5 19h14"></path></svg>
+              <span>导出</span>
+            </button>
+            <div class="glass-menu export-menu" id="exportMenu" role="menu" hidden>
+              <button type="button" data-export="word"><strong>常规 Word</strong><span>保存原始转写稿</span></button>
+              <button type="button" data-export="official-word"><strong>公文 Word</strong><span>套用公文结构</span></button>
+              <button type="button" data-export="minutes-word"><strong>会议纪要 Word</strong><span>生成会议纪要</span></button>
+              <div class="menu-divider"></div>
+              <button type="button" data-export="pdf"><strong>常规 PDF</strong><span>便于快速分发</span></button>
+              <button type="button" data-export="official-pdf"><strong>公文 PDF</strong><span>公文打印版式</span></button>
+              <button type="button" data-export="minutes-pdf"><strong>会议纪要 PDF</strong><span>会议记录版式</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="find-strip" id="findStrip" hidden>
+        <label><span>查找</span><input id="findInput" type="text" placeholder="输入关键词"></label>
+        <label><span>替换为</span><input id="replaceInput" type="text" placeholder="输入替换文本"></label>
+        <button class="fg-glass-button text-button" id="findNextButton" type="button">下一个</button>
+        <button class="fg-glass-button text-button" id="replaceButton" type="button">替换</button>
+        <button class="fg-glass-button text-button primary-soft" id="replaceAllButton" type="button">全部替换</button>
+        <button class="fg-icon-button compact-icon" id="closeFindButton" type="button" aria-label="关闭查找">×</button>
+      </div>
+
+      <div class="editor-wrap">
+        <textarea id="transcriptEditor" spellcheck="false" placeholder="开始录制或导入音频后，转写内容会出现在这里。" aria-label="转写内容"></textarea>
+        <div class="editor-empty" id="editorEmpty">
+          <div class="empty-orbit"><span></span></div>
+          <strong>等待声音</strong>
+          <p id="microphoneHint">正在检测系统默认麦克风，所有处理都在本机完成。</p>
+        </div>
+        <div class="streaming-indicator" id="streamingIndicator" hidden>
+          <span></span><span></span><span></span>
+          <em>实时更新</em>
+        </div>
+        <div class="current-segments" id="currentSegments" aria-label="当前会话时间段" hidden></div>
+      </div>
+    </section>
+
+    <aside class="fg-card-panel session-panel" aria-labelledby="sessionTitle">
+      <div class="session-heading">
+        <div>
+          <div class="section-kicker">SESSION</div>
+          <h2 id="sessionTitle">会话概览</h2>
+        </div>
+        <div class="session-heading-actions">
+          <button class="fg-icon-button sidebar-toggle" id="collapseSidebarButton" type="button" aria-label="收起会话侧栏" aria-expanded="true" title="收起侧栏">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"></path></svg>
+          </button>
+          <button class="fg-icon-button settings-trigger" id="settingsButton" type="button" aria-label="打开设置" title="设置">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1A1.7 1.7 0 0 0 8.6 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.1A1.7 1.7 0 0 0 4.6 8.6a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.1A1.7 1.7 0 0 0 15.4 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.39.28.74.62 1 1 .27.32.48.7.6 1.1v.1h-1"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="session-hero" data-fg-glass role="status" aria-live="polite" aria-atomic="true">
+        <div class="session-state-row">
+          <strong id="statusHeadline">准备就绪</strong>
+          <span class="state-badge" id="phaseBadge">就绪</span>
+        </div>
+        <div class="session-clock" id="sessionClock">00:00</div>
+        <div class="session-caption" id="statusDetail">所有语音处理均在本机完成</div>
+        <div class="session-limit" id="sessionCaption">单次录制最长 2 小时</div>
+        <div class="session-progress"><span id="sessionProgress"></span></div>
+      </div>
+
+      <div class="session-grid">
+        <button class="session-tile" id="languageTile" type="button" title="切换识别语言">
+          <span>识别语言</span><strong id="languageValue">中文（简体）</strong>
+        </button>
+        <div class="session-tile"><span>识别模式</span><strong id="modeValue">实时流式</strong></div>
+        <button class="session-tile" id="lexiconTile" type="button" title="管理词库">
+          <span>专业词库</span><strong id="lexiconValue">已启用</strong>
+        </button>
+        <button class="session-tile microphone-tile" id="microphoneTile" type="button" title="选择输入设备"><span>输入设备</span><strong id="microphoneValue" data-status="idle">系统默认麦克风</strong></button>
+      </div>
+
+      <div class="session-links">
+        <button id="historyButton" type="button">历史会话 <span class="history-count" id="historyCount">0</span></button>
+        <button id="importSideButton" type="button">导入音频</button>
+        <button id="diagnoseButton" type="button">系统诊断</button>
+        <button id="logButton" type="button">运行日志</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="record-dock fg-glass-panel" id="recordDock" data-fg-glass>
+    <div class="dock-info">
+      <div class="dock-icon" id="dockIcon"><span></span></div>
+      <div><strong id="dockTitle">准备就绪</strong><span id="dockSubtitle">按 Ctrl+Shift+F8 也可以开始</span></div>
+    </div>
+    <div class="dock-controls">
+      <button class="fg-glass-button dock-secondary" id="importButton" type="button" aria-label="导入音频" title="导入音频">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0 4 4m-4-4L8 8"></path><path d="M5 15v4h14v-4"></path></svg>
+      </button>
+      <button class="fg-glass-button dock-secondary" id="pauseButton" type="button" aria-label="暂停录音" title="暂停录音" disabled>
+        <svg class="pause-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6v12M16 6v12"></path></svg>
+        <svg class="resume-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6z"></path></svg>
+      </button>
+      <button class="record-button" id="recordButton" type="button" aria-label="开始录制">
+        <span class="record-button-ring"></span>
+        <span class="record-button-core">
+          <svg class="record-glyph" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3M9 21h6"></path></svg>
+          <svg class="stop-glyph" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="6.5" width="11" height="11" rx="2"></rect></svg>
+        </span>
+      </button>
+      <button class="fg-glass-button dock-secondary" id="copyDockButton" type="button" aria-label="复制转写稿" title="复制转写稿" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+      </button>
+    </div>
+    <div class="dock-state">
+      <span id="dockMode">实时流式</span>
+      <strong id="dockClock">00:00</strong>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="settings-drawer fg-card-panel" id="settingsDrawer" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" tabindex="-1" hidden>
+    <header>
+      <div><div class="section-kicker">PREFERENCES</div><h2 id="settingsTitle">运行设置</h2></div>
+      <button class="fg-icon-button" id="closeSettingsButton" type="button" aria-label="关闭设置">×</button>
+    </header>
+    <div class="settings-scroll">
+      <section class="settings-section">
+        <h3>识别</h3>
+        <label class="field-row"><span><strong>识别语言</strong><em>影响模型语言与文本规范化</em></span><select id="languageSelect"></select></label>
+        <label class="field-row"><span><strong>输入设备</strong><em id="microphoneSelectHint">录音开始前生效</em></span><select id="microphoneSelect"><option value="">系统默认麦克风</option></select></label>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="streaming_transcription_enabled"><span><strong>低延迟流式输出</strong><em>录音时持续显示识别结果</em></span></button>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="transcript_editable"><span><strong>允许编辑转写稿</strong><em>可直接修订识别结果</em></span></button>
+      </section>
+      <section class="settings-section">
+        <h3>词库</h3>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="lexicon_enabled"><span><strong>专业词自动修正</strong><em>流式识别和最终结果都会应用</em></span></button>
+        <div class="lexicon-list" id="lexiconList"></div>
+        <div class="custom-path-row"><div><strong>自定义词库</strong><span id="customLexiconPath">未导入</span></div><button class="fg-glass-button text-button" id="selectLexiconButton" type="button">选择文件</button></div>
+      </section>
+      <section class="settings-section">
+        <h3>快捷操作</h3>
+        <label class="field-row"><span><strong>全局快捷键</strong><em>点击输入框后直接按下组合键</em></span><input id="hotkeyInput" type="text" readonly></label>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="enable_hotkey"><span><strong>启用全局快捷键</strong><em>在其他窗口中也可开始或结束</em></span></button>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="inject_text"><span><strong>完成后自动粘贴</strong><em>将识别内容写入当前输入框</em></span></button>
+      </section>
+      <section class="settings-section">
+        <h3>窗口与启动</h3>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="floating_window"><span><strong>窗口置顶</strong><em>保持工作台位于其他窗口上方</em></span></button>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="minimize_to_tray"><span><strong>关闭到托盘</strong><em>关闭窗口后继续在后台运行</em></span></button>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="launch_on_startup"><span><strong>开机自启</strong><em>登录 Windows 后自动运行</em></span></button>
+        <button class="fg-toggle setting-toggle" type="button" data-setting="start_minimized"><span><strong>启动后最小化</strong><em>启动时不显示主窗口</em></span></button>
+      </section>
+    </div>
+    <footer><span id="settingsHint">保存后生效</span><div class="settings-footer-actions"><button class="fg-glass-button text-button" id="cancelSettingsButton" type="button">取消</button><button class="save-settings-button" id="saveSettingsButton" type="button">保存设置</button></div></footer>
+  </aside>
+
+  <div class="history-backdrop" id="historyBackdrop" hidden>
+    <section class="history-panel fg-card-panel" role="dialog" aria-modal="true" aria-labelledby="historyTitle" tabindex="-1">
+      <header>
+        <div><div class="section-kicker">SESSION ARCHIVE</div><h2 id="historyTitle">历史会话</h2></div>
+        <button class="fg-icon-button" id="closeHistoryButton" type="button" aria-label="关闭历史会话">×</button>
+      </header>
+      <div class="history-layout">
+        <nav class="history-list" id="historyList" aria-label="会话列表"></nav>
+        <article class="history-detail" id="historyDetail"></article>
+      </div>
+      <footer>
+        <span>时间统一按秒保存；无时间戳时按段落长度估算。</span>
+        <button class="save-settings-button" id="loadHistoryButton" type="button">载入转写稿</button>
+      </footer>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="app-modal fg-card-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <div class="modal-mark" id="modalMark">!</div>
+      <div><div class="section-kicker" id="modalKicker">NOTICE</div><h2 id="modalTitle">提示</h2><p id="modalMessage"></p></div>
+      <div class="modal-actions"><button class="fg-glass-button text-button" id="modalCancel" type="button" hidden>取消</button><button class="modal-confirm" id="modalConfirm" type="button">知道了</button></div>
+    </section>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

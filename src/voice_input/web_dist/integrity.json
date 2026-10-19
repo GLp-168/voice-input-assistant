@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "files": [
+    {
+      "path": "assets/index-CPkE-GCe.js",
+      "size": 33381,
+      "sha256": "5158e3744e8871ef9f7111a7492cb12f658ff4eb0e4189fc8db4af781035e2de"
+    },
+    {
+      "path": "assets/index-Cvh5gT_r.css",
+      "size": 35928,
+      "sha256": "4d17dd3905177ac478d7f8a216494de6c5af3a15e896c9122c9daab96f0981fa"
+    },
+    {
+      "path": "index.html",
+      "size": 18690,
+      "sha256": "019a44a4a5ee77e539d4a256c958babf13601d33d0bfbc051a16b377178a50b2"
+    }
+  ]
+}

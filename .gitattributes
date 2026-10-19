@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+
+# Built assets are hashed by integrity.json; preserve their exact bytes.
+src/voice_input/web_dist/** -text

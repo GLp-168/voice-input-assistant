@@ -1,0 +1,620 @@
+[
+  {
+    "source": "政屋",
+    "target": "政务",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "government",
+      "source_reference": "国务院关于加强数字政府建设的指导意见"
+    }
+  },
+  {
+    "source": "政物",
+    "target": "政务",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "government"
+    }
+  },
+  {
+    "source": "数字正府",
+    "target": "数字政府",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "government"
+    }
+  },
+  {
+    "source": "一网通班",
+    "target": "一网通办",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "government"
+    }
+  },
+  {
+    "source": "一网通半",
+    "target": "一网通办",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government"
+    }
+  },
+  {
+    "source": "跨省通班",
+    "target": "跨省通办",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "government"
+    }
+  },
+  {
+    "source": "数据共想",
+    "target": "数据共享",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "digital-government"
+    }
+  },
+  {
+    "source": "政务数局",
+    "target": "政务数据",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "digital-government"
+    }
+  },
+  {
+    "source": "政务大数局",
+    "target": "政务大数据",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "digital-government"
+    }
+  },
+  {
+    "source": "营商环镜",
+    "target": "营商环境",
+    "rule_type": "replace",
+    "weight": 100,
+    "metadata": {
+      "domain": "government-work-report"
+    }
+  },
+  {
+    "source": "证照分里",
+    "target": "证照分离",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "一业一政",
+    "target": "一业一证",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "免申即想",
+    "target": "免申即享",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "民生直答",
+    "target": "民生直达",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "新制生产力",
+    "target": "新质生产力",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government-work-report"
+    }
+  },
+  {
+    "source": "高质量法展",
+    "target": "高质量发展",
+    "rule_type": "replace",
+    "weight": 80,
+    "metadata": {
+      "domain": "government-work-report"
+    }
+  },
+  {
+    "source": "一网统办",
+    "target": "一网通办",
+    "rule_type": "replace",
+    "weight": 90,
+    "metadata": {
+      "domain": "government"
+    }
+  },
+  {
+    "source": "数字政府",
+    "target": "数字政府",
+    "aliases": [
+      "数字正府",
+      "数字政务",
+      "数智政府",
+      "数治政府"
+    ],
+    "rule_type": "hotword",
+    "weight": 130,
+    "metadata": {
+      "domain": "digital-government"
+    }
+  },
+  {
+    "source": "政务服务",
+    "target": "政务服务",
+    "aliases": [
+      "政务服物",
+      "政务服务务",
+      "政务办事"
+    ],
+    "rule_type": "hotword",
+    "weight": 130,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "一网通办",
+    "target": "一网通办",
+    "aliases": [
+      "一网统办",
+      "一网通班",
+      "一网通半",
+      "一往通办"
+    ],
+    "rule_type": "hotword",
+    "weight": 130,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "跨省通办",
+    "target": "跨省通办",
+    "aliases": [
+      "跨省通班",
+      "跨省同办",
+      "跨省通板"
+    ],
+    "rule_type": "hotword",
+    "weight": 120,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "营商环境",
+    "target": "营商环境",
+    "aliases": [
+      "营商环镜",
+      "营商换境",
+      "营商环境建设"
+    ],
+    "rule_type": "hotword",
+    "weight": 120,
+    "metadata": {
+      "domain": "government-work-report"
+    }
+  },
+  {
+    "source": "新质生产力",
+    "target": "新质生产力",
+    "aliases": [
+      "新制生产力",
+      "新智生产力",
+      "新质生产率"
+    ],
+    "rule_type": "hotword",
+    "weight": 120,
+    "metadata": {
+      "domain": "government-work-report"
+    }
+  },
+  {
+    "source": "高质量发展",
+    "target": "高质量发展",
+    "aliases": [
+      "高质量法展",
+      "高品质发展",
+      "高质量开展"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "government-work-report"
+    }
+  },
+  {
+    "source": "数据共享",
+    "target": "数据共享",
+    "aliases": [
+      "数据共想",
+      "数据共向",
+      "数据共享享"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "digital-government"
+    }
+  },
+  {
+    "source": "证照分离",
+    "target": "证照分离",
+    "aliases": [
+      "证照分里",
+      "证照分离改革",
+      "证照分梨"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "免申即享",
+    "target": "免申即享",
+    "aliases": [
+      "免申即想",
+      "免申即响",
+      "免申即享受"
+    ],
+    "rule_type": "hotword",
+    "weight": 110,
+    "metadata": {
+      "domain": "government-service"
+    }
+  },
+  {
+    "source": "高效办成一件事",
+    "target": "高效办成一件事",
+    "rule_type": "hotword",
+    "aliases": [
+      "高效办成一件事情",
+      "高效办成一件是",
+      "高效办成一建事"
+    ],
+    "weight": 130,
+    "domain": "government-service",
+    "category": "service-reform",
+    "usage": "asr-hotword",
+    "confidence": 0.94,
+    "examples": [
+      "推进高效办成一件事改革。"
+    ]
+  },
+  {
+    "source": "政务服务中心",
+    "target": "政务服务中心",
+    "rule_type": "hotword",
+    "aliases": [
+      "政务服务大厅",
+      "政务中心",
+      "政务服物中心"
+    ],
+    "weight": 120,
+    "domain": "government-service",
+    "category": "service-hall",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "一体化政务服务平台",
+    "target": "一体化政务服务平台",
+    "rule_type": "hotword",
+    "aliases": [
+      "一体化政务平台",
+      "一体化正务服务平台",
+      "一体化政务服物平台"
+    ],
+    "weight": 125,
+    "domain": "digital-government",
+    "category": "platform",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "全国一体化政务服务平台",
+    "target": "全国一体化政务服务平台",
+    "rule_type": "hotword",
+    "aliases": [
+      "全国一体化政务平台",
+      "国家政务服务平台",
+      "全国一体化政务服物平台"
+    ],
+    "weight": 125,
+    "domain": "digital-government",
+    "category": "platform",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "互联网+政务服务",
+    "target": "互联网+政务服务",
+    "rule_type": "hotword",
+    "aliases": [
+      "互联网加政务服务",
+      "互联网政务服务",
+      "互联网加正务服务"
+    ],
+    "weight": 120,
+    "domain": "digital-government",
+    "category": "online-service",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "电子证照",
+    "target": "电子证照",
+    "rule_type": "hotword",
+    "aliases": [
+      "电子证召",
+      "电子证件照",
+      "电子证照库"
+    ],
+    "weight": 120,
+    "domain": "digital-government",
+    "category": "digital-license",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "电子印章",
+    "target": "电子印章",
+    "rule_type": "hotword",
+    "aliases": [
+      "电子印张",
+      "电子用章",
+      "电子签章"
+    ],
+    "weight": 115,
+    "domain": "digital-government",
+    "category": "e-seal",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "电子材料",
+    "target": "电子材料",
+    "rule_type": "hotword",
+    "aliases": [
+      "电子才料",
+      "电子资料",
+      "电子材料清单"
+    ],
+    "weight": 110,
+    "domain": "digital-government",
+    "category": "e-material",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "政务数据共享交换",
+    "target": "政务数据共享交换",
+    "rule_type": "hotword",
+    "aliases": [
+      "政务数据共享交互",
+      "政务数据交换共享",
+      "政务数局共享交换"
+    ],
+    "weight": 120,
+    "domain": "digital-government",
+    "category": "data-sharing",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "公共数据授权运营",
+    "target": "公共数据授权运营",
+    "rule_type": "hotword",
+    "aliases": [
+      "公共数据授权运行",
+      "公共数据运营",
+      "公共数局授权运营"
+    ],
+    "weight": 115,
+    "domain": "digital-government",
+    "category": "public-data",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "数据要素",
+    "target": "数据要素",
+    "rule_type": "hotword",
+    "aliases": [
+      "数局要素",
+      "数据因素",
+      "数据要数"
+    ],
+    "weight": 115,
+    "domain": "digital-government",
+    "category": "data-element",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "好差评",
+    "target": "好差评",
+    "rule_type": "hotword",
+    "aliases": [
+      "好差平",
+      "好差评系统",
+      "政务服务好差评"
+    ],
+    "weight": 110,
+    "domain": "government-service",
+    "category": "service-rating",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "告知承诺制",
+    "target": "告知承诺制",
+    "rule_type": "hotword",
+    "aliases": [
+      "告知承诺",
+      "告之承诺制",
+      "告知承诺书"
+    ],
+    "weight": 115,
+    "domain": "government-service",
+    "category": "approval-reform",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "容缺受理",
+    "target": "容缺受理",
+    "rule_type": "hotword",
+    "aliases": [
+      "容缺办理",
+      "容缺收理",
+      "容缺材料"
+    ],
+    "weight": 115,
+    "domain": "government-service",
+    "category": "approval-reform",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "一窗受理",
+    "target": "一窗受理",
+    "rule_type": "hotword",
+    "aliases": [
+      "一窗办理",
+      "一窗收理",
+      "综合窗口受理"
+    ],
+    "weight": 115,
+    "domain": "government-service",
+    "category": "service-window",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "综合受理",
+    "target": "综合受理",
+    "rule_type": "hotword",
+    "aliases": [
+      "综合窗口",
+      "综窗受理",
+      "综合收理"
+    ],
+    "weight": 110,
+    "domain": "government-service",
+    "category": "service-window",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "不见面审批",
+    "target": "不见面审批",
+    "rule_type": "hotword",
+    "aliases": [
+      "不见面申批",
+      "不见面办理",
+      "网上审批"
+    ],
+    "weight": 115,
+    "domain": "government-service",
+    "category": "online-approval",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "智慧政务",
+    "target": "智慧政务",
+    "rule_type": "hotword",
+    "aliases": [
+      "智能政务",
+      "智慧正务",
+      "智慧政府"
+    ],
+    "weight": 110,
+    "domain": "digital-government",
+    "category": "smart-government",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "基层治理",
+    "target": "基层治理",
+    "rule_type": "hotword",
+    "aliases": [
+      "基层智理",
+      "基层治里",
+      "基层治理能力"
+    ],
+    "weight": 110,
+    "domain": "government-service",
+    "category": "governance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "网格化管理",
+    "target": "网格化管理",
+    "rule_type": "hotword",
+    "aliases": [
+      "网格管理",
+      "网格化治理",
+      "网格员管理"
+    ],
+    "weight": 110,
+    "domain": "government-service",
+    "category": "governance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  }
+]

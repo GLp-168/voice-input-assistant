@@ -1,0 +1,584 @@
+[
+  {
+    "source": "招头标",
+    "target": "招投标",
+    "rule_type": "replace",
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "correction",
+    "confidence": 0.92
+  },
+  {
+    "source": "工程量青单",
+    "target": "工程量清单",
+    "rule_type": "replace",
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "cost",
+    "usage": "correction",
+    "confidence": 0.9
+  },
+  {
+    "source": "俊工验收",
+    "target": "竣工验收",
+    "rule_type": "replace",
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "acceptance",
+    "usage": "correction",
+    "confidence": 0.9
+  },
+  {
+    "source": "施工图审察",
+    "target": "施工图审查",
+    "rule_type": "replace",
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "design-review",
+    "usage": "correction",
+    "confidence": 0.9
+  },
+  {
+    "source": "经理单位",
+    "target": "监理单位",
+    "rule_type": "replace",
+    "weight": 100,
+    "domain": "project-engineering",
+    "category": "stakeholder",
+    "usage": "correction",
+    "confidence": 0.82
+  },
+  {
+    "source": "总成包",
+    "target": "总承包",
+    "rule_type": "replace",
+    "weight": 100,
+    "domain": "project-engineering",
+    "category": "contract",
+    "usage": "correction",
+    "confidence": 0.86
+  },
+  {
+    "source": "安全文明施",
+    "target": "安全文明施工",
+    "rule_type": "replace",
+    "weight": 100,
+    "domain": "project-engineering",
+    "category": "construction",
+    "usage": "correction",
+    "confidence": 0.86
+  },
+  {
+    "source": "设计边更",
+    "target": "设计变更",
+    "rule_type": "replace",
+    "weight": 90,
+    "domain": "project-engineering",
+    "category": "change",
+    "usage": "correction",
+    "confidence": 0.86
+  },
+  {
+    "source": "合同价管",
+    "target": "合同价款",
+    "rule_type": "replace",
+    "weight": 90,
+    "domain": "project-engineering",
+    "category": "contract",
+    "usage": "correction",
+    "confidence": 0.84
+  },
+  {
+    "source": "进度管",
+    "target": "进度款",
+    "rule_type": "replace",
+    "weight": 80,
+    "domain": "project-engineering",
+    "category": "payment",
+    "usage": "correction",
+    "confidence": 0.82
+  },
+  {
+    "source": "招投标",
+    "target": "招投标",
+    "rule_type": "hotword",
+    "aliases": [
+      "招标投标",
+      "公开招标",
+      "竞争性磋商"
+    ],
+    "weight": 140,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "asr-hotword",
+    "confidence": 0.98
+  },
+  {
+    "source": "工程量清单",
+    "target": "工程量清单",
+    "rule_type": "hotword",
+    "aliases": [
+      "清单计价",
+      "工程量清单计价",
+      "分部分项工程量清单"
+    ],
+    "weight": 130,
+    "domain": "project-engineering",
+    "category": "cost",
+    "usage": "asr-hotword",
+    "confidence": 0.96
+  },
+  {
+    "source": "竣工验收",
+    "target": "竣工验收",
+    "rule_type": "hotword",
+    "aliases": [
+      "工程验收",
+      "竣工验收报告"
+    ],
+    "weight": 130,
+    "domain": "project-engineering",
+    "category": "acceptance",
+    "usage": "asr-hotword",
+    "confidence": 0.96
+  },
+  {
+    "source": "竣工验收备案",
+    "target": "竣工验收备案",
+    "rule_type": "hotword",
+    "aliases": [
+      "工程竣工验收备案",
+      "建设工程竣工验收备案"
+    ],
+    "weight": 128,
+    "domain": "project-engineering",
+    "category": "acceptance",
+    "usage": "asr-hotword",
+    "confidence": 0.95
+  },
+  {
+    "source": "施工图审查",
+    "target": "施工图审查",
+    "rule_type": "hotword",
+    "aliases": [
+      "施工图设计",
+      "图纸会审",
+      "审图意见"
+    ],
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "design-review",
+    "usage": "asr-hotword",
+    "confidence": 0.94
+  },
+  {
+    "source": "监理单位",
+    "target": "监理单位",
+    "rule_type": "hotword",
+    "aliases": [
+      "总监理工程师",
+      "监理工程师",
+      "监理例会"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "stakeholder",
+    "usage": "asr-hotword",
+    "confidence": 0.92
+  },
+  {
+    "source": "建设单位",
+    "target": "建设单位",
+    "rule_type": "hotword",
+    "aliases": [
+      "代建单位",
+      "业主单位",
+      "项目建设单位"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "stakeholder",
+    "usage": "asr-hotword",
+    "confidence": 0.92
+  },
+  {
+    "source": "施工单位",
+    "target": "施工单位",
+    "rule_type": "hotword",
+    "aliases": [
+      "总包单位",
+      "分包单位",
+      "承包单位"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "stakeholder",
+    "usage": "asr-hotword",
+    "confidence": 0.92
+  },
+  {
+    "source": "总承包",
+    "target": "总承包",
+    "rule_type": "hotword",
+    "aliases": [
+      "工程总承包",
+      "施工总承包",
+      "EPC总承包"
+    ],
+    "weight": 100,
+    "domain": "project-engineering",
+    "category": "contract",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "安全文明施工",
+    "target": "安全文明施工",
+    "rule_type": "hotword",
+    "aliases": [
+      "安全生产",
+      "文明施工",
+      "安全文明措施费"
+    ],
+    "weight": 100,
+    "domain": "project-engineering",
+    "category": "construction",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "竣工结算",
+    "target": "竣工结算",
+    "rule_type": "hotword",
+    "aliases": [
+      "工程结算",
+      "结算审核",
+      "结算审计"
+    ],
+    "weight": 100,
+    "domain": "project-engineering",
+    "category": "settlement",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "项目建议书",
+    "target": "项目建议书",
+    "rule_type": "hotword",
+    "aliases": [
+      "项目建义书",
+      "项目建议",
+      "项目建议报告"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "approval",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "可行性研究报告",
+    "target": "可行性研究报告",
+    "rule_type": "hotword",
+    "aliases": [
+      "可研报告",
+      "可行性研究",
+      "可行性研就报告"
+    ],
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "approval",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "初步设计",
+    "target": "初步设计",
+    "rule_type": "hotword",
+    "aliases": [
+      "初设",
+      "初步设技",
+      "初步设计方案"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "design",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "概算批复",
+    "target": "概算批复",
+    "rule_type": "hotword",
+    "aliases": [
+      "概算批付",
+      "概算批复文件",
+      "投资概算批复"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "approval",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "施工许可证",
+    "target": "施工许可证",
+    "rule_type": "hotword",
+    "aliases": [
+      "施工许可",
+      "施工许可信",
+      "建筑工程施工许可证"
+    ],
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "permit",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "招标文件",
+    "target": "招标文件",
+    "rule_type": "hotword",
+    "aliases": [
+      "招标文建",
+      "招标文书",
+      "招标资料"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "投标文件",
+    "target": "投标文件",
+    "rule_type": "hotword",
+    "aliases": [
+      "投标文建",
+      "投标文书",
+      "投标资料"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "评标委员会",
+    "target": "评标委员会",
+    "rule_type": "hotword",
+    "aliases": [
+      "评标委",
+      "评标委员 会",
+      "评标专家委员会"
+    ],
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "中标候选人",
+    "target": "中标候选人",
+    "rule_type": "hotword",
+    "aliases": [
+      "中标后选人",
+      "中标候选单位",
+      "第一中标候选人"
+    ],
+    "weight": 120,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "中标通知书",
+    "target": "中标通知书",
+    "rule_type": "hotword",
+    "aliases": [
+      "中标通知书",
+      "中标通知",
+      "中标通之书"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "bidding",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "招标控制价",
+    "target": "招标控制价",
+    "rule_type": "hotword",
+    "aliases": [
+      "招标控制价款",
+      "控制价",
+      "最高投标限价"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "cost",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "合同履约",
+    "target": "合同履约",
+    "rule_type": "hotword",
+    "aliases": [
+      "合同履行",
+      "履约管理",
+      "合同吕约"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "contract",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "变更签证",
+    "target": "变更签证",
+    "rule_type": "hotword",
+    "aliases": [
+      "工程签证",
+      "变更签正",
+      "现场签证"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "change",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "隐蔽工程验收",
+    "target": "隐蔽工程验收",
+    "rule_type": "hotword",
+    "aliases": [
+      "隐蔽验收",
+      "隐蔽工程",
+      "隐避工程验收"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "acceptance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "分部分项工程",
+    "target": "分部分项工程",
+    "rule_type": "hotword",
+    "aliases": [
+      "分部分项",
+      "分部工程",
+      "分项工程"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "construction",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "质量安全监督",
+    "target": "质量安全监督",
+    "rule_type": "hotword",
+    "aliases": [
+      "质安监督",
+      "质量安全监管",
+      "质量安全监度"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "supervision",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "消防验收",
+    "target": "消防验收",
+    "rule_type": "hotword",
+    "aliases": [
+      "消防检收",
+      "消防验收备案",
+      "消防审验"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "acceptance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "竣工备案",
+    "target": "竣工备案",
+    "rule_type": "hotword",
+    "aliases": [
+      "竣工备案",
+      "工程竣工备案"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "acceptance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "农民工工资保证金",
+    "target": "农民工工资保证金",
+    "rule_type": "hotword",
+    "aliases": [
+      "农民工工资保障金",
+      "工资保证金",
+      "民工工资保证金"
+    ],
+    "weight": 115,
+    "domain": "project-engineering",
+    "category": "labor",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "工程款支付",
+    "target": "工程款支付",
+    "rule_type": "hotword",
+    "aliases": [
+      "工程款支付",
+      "工程进度款",
+      "工程款拨付"
+    ],
+    "weight": 110,
+    "domain": "project-engineering",
+    "category": "payment",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  }
+]

@@ -1,0 +1,557 @@
+[
+  {
+    "source": "专向债",
+    "target": "专项债",
+    "rule_type": "replace",
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "public-finance",
+    "usage": "correction",
+    "confidence": 0.92,
+    "examples": [
+      "本次会议讨论专项债资金使用。"
+    ]
+  },
+  {
+    "source": "增植税",
+    "target": "增值税",
+    "rule_type": "replace",
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "tax",
+    "usage": "correction",
+    "confidence": 0.95
+  },
+  {
+    "source": "一般公共预蒜",
+    "target": "一般公共预算",
+    "rule_type": "replace",
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "correction",
+    "confidence": 0.9
+  },
+  {
+    "source": "政府性资金预算",
+    "target": "政府性基金预算",
+    "rule_type": "replace",
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "correction",
+    "confidence": 0.9
+  },
+  {
+    "source": "飞税收入",
+    "target": "非税收入",
+    "rule_type": "replace",
+    "weight": 100,
+    "domain": "finance-budget",
+    "category": "revenue",
+    "usage": "correction",
+    "confidence": 0.88
+  },
+  {
+    "source": "才政拨款",
+    "target": "财政拨款",
+    "rule_type": "replace",
+    "weight": 100,
+    "domain": "finance-budget",
+    "category": "appropriation",
+    "usage": "correction",
+    "confidence": 0.9
+  },
+  {
+    "source": "国库集中之付",
+    "target": "国库集中支付",
+    "rule_type": "replace",
+    "weight": 100,
+    "domain": "finance-budget",
+    "category": "payment",
+    "usage": "correction",
+    "confidence": 0.86
+  },
+  {
+    "source": "预算集效",
+    "target": "预算绩效",
+    "rule_type": "replace",
+    "weight": 90,
+    "domain": "finance-budget",
+    "category": "performance",
+    "usage": "correction",
+    "confidence": 0.86
+  },
+  {
+    "source": "政务采购",
+    "target": "政府采购",
+    "rule_type": "replace",
+    "weight": 90,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "correction",
+    "confidence": 0.82
+  },
+  {
+    "source": "结转节余",
+    "target": "结转结余",
+    "rule_type": "replace",
+    "weight": 80,
+    "domain": "finance-budget",
+    "category": "settlement",
+    "usage": "correction",
+    "confidence": 0.84
+  },
+  {
+    "source": "专项债",
+    "target": "专项债",
+    "rule_type": "hotword",
+    "aliases": [
+      "地方政府专项债",
+      "专项债券",
+      "专项债资金"
+    ],
+    "weight": 140,
+    "domain": "finance-budget",
+    "category": "bond",
+    "usage": "asr-hotword",
+    "confidence": 0.98
+  },
+  {
+    "source": "增值税",
+    "target": "增值税",
+    "rule_type": "hotword",
+    "aliases": [
+      "增值税发票",
+      "增值税专用发票",
+      "增值税普通发票"
+    ],
+    "weight": 130,
+    "domain": "finance-budget",
+    "category": "tax",
+    "usage": "asr-hotword",
+    "confidence": 0.98
+  },
+  {
+    "source": "一般公共预算",
+    "target": "一般公共预算",
+    "rule_type": "hotword",
+    "aliases": [
+      "一般公共预算收入",
+      "一般公共预算支出",
+      "公共预算"
+    ],
+    "weight": 130,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "asr-hotword",
+    "confidence": 0.96
+  },
+  {
+    "source": "政府性基金预算",
+    "target": "政府性基金预算",
+    "rule_type": "hotword",
+    "aliases": [
+      "政府性基金",
+      "基金预算",
+      "政府性基金收入"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "asr-hotword",
+    "confidence": 0.94
+  },
+  {
+    "source": "非税收入",
+    "target": "非税收入",
+    "rule_type": "hotword",
+    "aliases": [
+      "行政事业性收费",
+      "罚没收入",
+      "国有资源有偿使用收入"
+    ],
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "revenue",
+    "usage": "asr-hotword",
+    "confidence": 0.92
+  },
+  {
+    "source": "国库集中支付",
+    "target": "国库集中支付",
+    "rule_type": "hotword",
+    "aliases": [
+      "国库支付",
+      "直接支付",
+      "授权支付"
+    ],
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "payment",
+    "usage": "asr-hotword",
+    "confidence": 0.92
+  },
+  {
+    "source": "预算绩效管理",
+    "target": "预算绩效管理",
+    "rule_type": "hotword",
+    "aliases": [
+      "预算绩效"
+    ],
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "performance",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "政府采购",
+    "target": "政府采购",
+    "rule_type": "hotword",
+    "aliases": [
+      "采购预算",
+      "采购计划",
+      "采购合同"
+    ],
+    "weight": 100,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "财政拨款",
+    "target": "财政拨款",
+    "rule_type": "hotword",
+    "aliases": [
+      "财政拨款收入",
+      "财政拨款结转",
+      "财政拨款结余"
+    ],
+    "weight": 100,
+    "domain": "finance-budget",
+    "category": "appropriation",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "转移支付",
+    "target": "转移支付",
+    "rule_type": "hotword",
+    "aliases": [
+      "一般性转移支付",
+      "专项转移支付",
+      "上级转移支付"
+    ],
+    "weight": 100,
+    "domain": "finance-budget",
+    "category": "transfer-payment",
+    "usage": "asr-hotword",
+    "confidence": 0.9
+  },
+  {
+    "source": "部门预算",
+    "target": "部门预算",
+    "rule_type": "hotword",
+    "aliases": [
+      "部门预蒜",
+      "部门预算编制",
+      "单位预算"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "部门决算",
+    "target": "部门决算",
+    "rule_type": "hotword",
+    "aliases": [
+      "部门结算",
+      "部门决蒜",
+      "单位决算"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "final-account",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "预算执行",
+    "target": "预算执行",
+    "rule_type": "hotword",
+    "aliases": [
+      "预算执 行",
+      "预算执行率",
+      "执行进度"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "budget-execution",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "预算调整",
+    "target": "预算调整",
+    "rule_type": "hotword",
+    "aliases": [
+      "预算调正",
+      "调整预算",
+      "预算调剂"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "budget-adjustment",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "零基预算",
+    "target": "零基预算",
+    "rule_type": "hotword",
+    "aliases": [
+      "零级预算",
+      "零基础预算",
+      "零基预蒜"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "budget-method",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "国有资本经营预算",
+    "target": "国有资本经营预算",
+    "rule_type": "hotword",
+    "aliases": [
+      "国资经营预算",
+      "国有资本预算",
+      "国有资本经营预蒜"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "社会保险基金预算",
+    "target": "社会保险基金预算",
+    "rule_type": "hotword",
+    "aliases": [
+      "社保基金预算",
+      "社会保障基金预算",
+      "社会保险基金预蒜"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "budget",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "预算管理一体化",
+    "target": "预算管理一体化",
+    "rule_type": "hotword",
+    "aliases": [
+      "预算一体化",
+      "预算管理一体化系统",
+      "预算管里一体化"
+    ],
+    "weight": 125,
+    "domain": "finance-budget",
+    "category": "budget-system",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "财政直达资金",
+    "target": "财政直达资金",
+    "rule_type": "hotword",
+    "aliases": [
+      "直达资金",
+      "财政直达机制",
+      "财政职达资金"
+    ],
+    "weight": 120,
+    "domain": "finance-budget",
+    "category": "transfer-payment",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "三公经费",
+    "target": "三公经费",
+    "rule_type": "hotword",
+    "aliases": [
+      "三公经费预算",
+      "三公经费支出",
+      "三工经费"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "expense",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "绩效目标",
+    "target": "绩效目标",
+    "rule_type": "hotword",
+    "aliases": [
+      "绩效指标",
+      "绩效目表",
+      "预算绩效目标"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "performance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "绩效评价",
+    "target": "绩效评价",
+    "rule_type": "hotword",
+    "aliases": [
+      "绩效评估",
+      "绩效评介",
+      "预算绩效评价"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "performance",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "政府购买服务",
+    "target": "政府购买服务",
+    "rule_type": "hotword",
+    "aliases": [
+      "政府采购服务",
+      "购买服务预算",
+      "政府购买服物"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "采购意向公开",
+    "target": "采购意向公开",
+    "rule_type": "hotword",
+    "aliases": [
+      "采购意向公示",
+      "采购意项公开",
+      "政府采购意向公开"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "框架协议采购",
+    "target": "框架协议采购",
+    "rule_type": "hotword",
+    "aliases": [
+      "框架协议",
+      "框架协义采购",
+      "框架协议采够"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "集中采购",
+    "target": "集中采购",
+    "rule_type": "hotword",
+    "aliases": [
+      "集采",
+      "集中采够",
+      "集中采购目录"
+    ],
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "分散采购",
+    "target": "分散采购",
+    "rule_type": "hotword",
+    "aliases": [
+      "分散采够",
+      "自行采购",
+      "分散采购限额"
+    ],
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "procurement",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "政府债务",
+    "target": "政府债务",
+    "rule_type": "hotword",
+    "aliases": [
+      "地方政府债务",
+      "政府债物",
+      "债务限额"
+    ],
+    "weight": 115,
+    "domain": "finance-budget",
+    "category": "debt",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  },
+  {
+    "source": "一般债券",
+    "target": "一般债券",
+    "rule_type": "hotword",
+    "aliases": [
+      "一般债卷",
+      "地方政府一般债券",
+      "一般债"
+    ],
+    "weight": 110,
+    "domain": "finance-budget",
+    "category": "debt",
+    "usage": "asr-hotword",
+    "confidence": 0.9,
+    "examples": []
+  }
+]

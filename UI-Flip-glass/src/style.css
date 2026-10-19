@@ -1,0 +1,23 @@
+/* SPDX-License-Identifier: GPL-3.0-only
+ * New application base styles, 2026-10-19. Theme values are supplied by webui.
+ * This file does not carry forward the former component stylesheet.
+ */
+:root {
+  --fg-font-sans: "Noto Sans SC", "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", Inter, system-ui, sans-serif;
+  --fg-font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+}
+.fg-shell, .fg-shell *, .fg-toast-host, .fg-toast-host * { box-sizing: border-box; }
+.fg-shell { position: relative; min-height: 100vh; font-family: var(--fg-font-sans); color: var(--fg-ink); }
+.fg-stage { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.fg-stage::before { content: ""; position: absolute; inset: 0; background-size: 58px 54px; }
+.fg-brand-mark { width: 16px; height: 16px; border-radius: 50%; background: conic-gradient(from 150deg, var(--fg-accent), #f4d28a, #7fd8ff, var(--fg-accent)); }
+.fg-window-actions { display: flex; align-items: center; gap: 8px; }
+.fg-icon-button { display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 50%; font-size: 16px; cursor: pointer; }
+.fg-glass-button { display: inline-grid; place-items: center; padding: 10px 16px; border: 0; border-radius: 50px; cursor: pointer; backdrop-filter: var(--fg-button-glass-filter); }
+.fg-card-panel { border: 1px solid var(--fg-hair); border-radius: 28px; background: var(--fg-paper); }
+.fg-glass-panel { background: var(--fg-panel-glass-bg); backdrop-filter: var(--fg-panel-glass-filter); box-shadow: var(--fg-panel-glass-shadow); }
+.fg-toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--fg-hair); border-radius: 16px; padding: 12px 14px; cursor: pointer; text-align: left; }
+.fg-toggle::after { content: ""; flex: 0 0 12px; width: 12px; height: 12px; border-radius: 50%; }
+.fg-toast-host { position: fixed; bottom: 112px; left: 50%; transform: translateX(-50%); z-index: 10000; display: grid; gap: 8px; pointer-events: none; max-width: calc(100vw - 32px); }
+.fg-toast { padding: 12px 20px; border-radius: 14px; font: 13px var(--fg-font-sans); overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { .fg-shell *, .fg-toast { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
