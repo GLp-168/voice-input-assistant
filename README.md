@@ -1,15 +1,15 @@
 # Voice Input Assistant
 
-`voice-input-assistant` 是面向桌面端的离线语音输入助手，包含麦克风录音、FunASR 流式识别、离线复核、词库、历史记录、导出和剪贴板输入。界面采用 PySide6 / Qt WebEngine 与本地 Web Components，也保留 Qt Widgets 兼容界面。
+`voice-input-assistant` 是面向桌面端的离线语音输入助手，包含麦克风录音、FunASR 流式识别、离线复核、词库、历史记录、导出和剪贴板输入。界面采用 PySide6 / Qt WebEngine 与本地玻璃界面适配层，也保留 Qt Widgets 兼容界面。
 
 公开源码不包含模型权重、录音、安装包或 vendor 二进制。真实识别需另行准备模型；功能验证范围和授权待办见 [整理报告](docs/PRE_UPLOAD_REVIEW.md) 与 [第三方清单](docs/THIRD_PARTY.md)。
 
-本地目录保留 `zyb_yuyin`，Python 导入名仍为 `voice_input`；发行包及计划仓库名统一为 `voice-input-assistant`，新增同名命令并保留旧 `voice-input` 命令兼容。用户配置目录不迁移。
+本地目录保留 `zyb_yuyin`，Python 导入名仍为 `voice_input`；发行包名为 `voice-input-assistant`，公开仓库为 [GLp-168/voice-input-assistant](https://github.com/GLp-168/voice-input-assistant)，新增同名命令并保留旧 `voice-input` 命令兼容。用户配置目录不迁移。
 
 ## 环境要求
 
 - Python 3.10+
-- Node.js 20.19+ 或 22.12+（仅开发或重新构建玻璃运行时界面时需要，最终安装包不需要）
+- Node.js 20.x（至少 20.19）或 22.12 及以上版本（仅开发或重新构建玻璃运行时界面时需要，最终安装包不需要）
 - 当前以 Windows 为主要目标；其他平台的安装、运行与输入注入尚需独立验证
 
 ## 安装
@@ -43,7 +43,7 @@ python -m pip install -e ".[dev]"
 - `tray`：包含 `pystray` 和 `Pillow`，用于系统托盘常驻。
 - `dev`：包含 `pytest`，用于本地测试。
 
-基础依赖已包含本地识别所需的 FunASR、ModelScope、Torch、torchaudio、sounddevice 和音频处理组件。首次打包前请先运行 `scripts/download_funasr_models.ps1` 下载内置模型。
+基础依赖已包含本地识别所需的 FunASR、ModelScope、Torch、torchaudio、sounddevice 和音频处理组件。首次进行真实识别或打包前，请在项目根目录执行 `./scripts/download_funasr_models.ps1` 准备模型（需要网络及足够磁盘空间）。它会下载到被 Git 忽略的 `vendor/funasr/models/`；下载前核对各模型授权。只运行自动测试无需下载模型。
 
 ## 运行
 
@@ -72,7 +72,7 @@ python -m voice_input --legacy-ui
 
 `auto` 的选择在一次应用会话内是 sticky 的：机器短时负载变化不会导致录音途中切换档位。重新启动应用后，运行时才会重新评估。
 
-运行时界面由 PySide6 Qt WebEngine 承载，并直接使用仓库内 `UI-Flip-glass` Web Components 包。修改 `webui/` 或 `UI-Flip-glass/` 后执行：
+运行时界面由 PySide6 Qt WebEngine 承载，并直接使用仓库内 `UI-Flip-glass` 0.2.0 玻璃界面适配层（不再注册旧版 Web Components）。修改 `webui/` 或 `UI-Flip-glass/` 后执行：
 
 ```powershell
 .\scripts\build_webui.ps1
@@ -81,6 +81,8 @@ python -m voice_input --legacy-ui
 构建结果会写入 `src/voice_input/web_dist`。如果 Web 资源缺失、WebEngine 窗口构造失败或页面加载失败，程序会自动回退到旧 Qt Widgets 界面；也可以使用 `--legacy-ui` 强制启动旧界面，便于现场排障。
 
 ## Windows 产品包
+
+本 GitHub 仓库当前仅发布源码，未发布可下载的 Windows 安装包。以下介绍构建脚本及设计支持的能力；本次源码整理没有重新制作或验收完整安装包。
 
 在 Windows 11 构建：
 
@@ -102,7 +104,7 @@ python -m voice_input --legacy-ui
 
 完整离线包可验证窗口、麦克风实时转写、音频导入和离线识别全流程；轻量实时包用于较小体积的实时录音转写交付，不包含离线复核、VAD、标点和导入音频能力。
 
-Windows 包已包含：
+Windows 打包配置支持以下能力（需自行构建并在目标机器验证）：
 
 - 全局快捷键，默认 `Ctrl+Shift+F8`
 - 关闭窗口时最小化到系统托盘
@@ -123,7 +125,7 @@ Windows 包已包含：
 
 ## 客户预览边界
 
-当前 Windows 包可用于客户预览以下内容：
+自行构建 Windows 包后，可按以下清单进行客户预览验收：
 
 - 安装包安装、桌面快捷方式、开始菜单入口和卸载入口。
 - 程序启动、窗口操作、首次启动提示、运行日志。
@@ -176,7 +178,7 @@ python -m voice_input.healthcheck --json
 - 已实现 Windows 全局热键和可选系统托盘；其他平台需按系统适配。
 - 跨应用输入注入当前采用剪贴板 + 粘贴热键方案，复杂目标软件仍需现场适配。
 - 噪声抑制、VAD、标点恢复等体验细节仍需继续增强。
-- Windows 已提供单文件安装包和免安装包；其他平台安装包仍需按目标系统补齐。
+- Windows 构建脚本支持单文件安装包和免安装包，本仓库尚未公开发布这些产物；其他平台安装包仍需按目标系统补齐。
 
 ## 后续方向
 

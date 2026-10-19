@@ -8,7 +8,7 @@
 - 函数正文与该提交逐字一致，仅新增 export 和许可头，已自动比对。上游 [README](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/README.md) 和 [LICENSE](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/LICENSE) 明确 GPL-3.0。
 - index.js、auto.js、index.d.ts、style.css、demo/index.html 为本轮在维护者指示下由 Codex 辅助新编写。新封装依据当前应用实际使用的接口和布局；并非声称未接触旧代码的净室开发。
 - 旧包包含的搜索、播放器、边缘浮层及 Web Components API 均不再实现，应用未使用它们。保留语音界面需要的玻璃、提示、基础 CSS。
-- 上游 LICENSE、原始 NOTICE、署名和修改记录随源码与 wheel 保存；未知封装旧文件及旧编译资源仅在被忽略的本地验证目录留作历史对照。
+- 完整 GPL v3 标准 LICENSE、上游原始 NOTICE、署名和修改记录随源码与 wheel 保存；未知封装旧文件及旧编译资源仅在被忽略的本地验证目录留作历史对照。
 
 ## 旧来源调查（历史）
 
@@ -35,3 +35,7 @@
 - 全新 147 文件源码副本构建 sdist 和 wheel 成功；npm dry-run 为 0.2.0。三种包的许可/来源文件齐全，wheel 界面文件与本轮构建逐字节相同，sdist 不含本地备份或 node_modules；未创建仓库或上传。
 
 其他依赖、模型及素材仍适用各自条款；本次解决的是 UI 封装来源问题，不是全面法律审计。
+
+## 公开仓库复核更正（2026-10-19）
+
+此前仅比对了本地 LICENSE 与上游副本的一致性，未发现上游文本缺少 GPL 第 5、6 节部分段落。现已将根和组件 LICENSE 更正为 SPDX 的完整 GPL-3.0-only 标准文本；上游原文件通过固定提交链接追溯，原始 NOTICE 和作者署名继续保留。此次不修改源代码、构建资源或所选许可版本。

@@ -6,7 +6,7 @@
 
 Copyright (C) 2026 XxHuberrr.
 
-`src/mineradio-map.js` 中的 generateControlGlassDisplacementMap 函数逐字提取自 Mineradio 提交 `6b130103f759e5dcd1e133700071c8216b8fa5a6` 的 [public/index.html](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/public/index.html)，仅添加 ES module export 和文件头。上游 [README](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/README.md) 声明 GPL-3.0；[LICENSE](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/LICENSE) 随本目录保留。
+`src/mineradio-map.js` 中的 generateControlGlassDisplacementMap 函数逐字提取自 Mineradio 提交 `6b130103f759e5dcd1e133700071c8216b8fa5a6` 的 [public/index.html](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/public/index.html)，仅添加 ES module export 和文件头。上游 [README](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/README.md) 声明 GPL-3.0；[原始 LICENSE](https://github.com/XxHuberrr/Mineradio-paused/blob/6b130103f759e5dcd1e133700071c8216b8fa5a6/LICENSE) 可通过固定链接追溯。2026-10-19 复核发现该上游文件缺少 GPL 第 5、6 节的部分段落；本目录 LICENSE 已替换为 SPDX 提供的完整 GPL v3 标准文本，不再复制有缺漏的版本。此更正不改变上游 README 的 GPL-3.0 授权声明或作者署名。
 
 UPSTREAM-NOTICE.md 原样保留上游 NOTICE，包括对 emily 的致谢。它是历史来源记录，其中音乐服务和依赖清单不代表本组件使用了这些服务或全部依赖。Mineradio 名称、MR Logo 和原作者署名不归本项目所有；本组件不代表上游官方产品。
 
